@@ -1,0 +1,39 @@
+<head>
+	<title>postit</title>
+	<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+</head>
+
+<body>
+	{{>display}}
+</body>
+
+<template name="display">
+	{{#if admin}}
+	{{>displayButtons}}
+	{{>displayPostits}}
+	{{else}}
+	{{>displayPostits}}
+	{{/if}}
+</template>
+
+<template name="displayButtons">
+	<p>"A"->Admin "P"->Public </p>
+	<p> Salut Arnaud, clique sur les boutons pour parler à Lyon. </p>
+	<button id="oui">oui</button>
+	<button id="non">non</button>
+	<button id="euh">euh</button>
+</template>
+
+<template name="displayPostits">
+	{{#each postits}}
+	{{> postit}}
+	{{/each}}
+</template>
+
+
+<template name="postit">
+	<div class="postit" id="{{id}}" style="left:{{x}}px;top:{{y}}px;">
+		<h2>{{title}}</h2>
+	</div>
+</template>
+
