@@ -1,9 +1,17 @@
+// TO DO
+// grossir et grasser le corps de texte OUI NON EUH
+// virer le toggle pour qu'on puisse faire "EUH NON"
+// avoir un fade-out plus rapide
+// avoir un fade-in très rapide pour voir si arnaud dit "oui oui"
+// que le oui non reste un peu moins longtemps
+
+
 
 Session.setDefault("admin", true)
 Session.setDefault("toggle", false)
 
 
-var delay=3000
+var delay=2000
 
 Template.body.events({
 
